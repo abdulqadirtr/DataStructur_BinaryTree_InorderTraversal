@@ -44,11 +44,25 @@ public class BinaryTree {
 			}
 		} 
 	}
+	/*
+	 * InOrder Traverse first Print left , then root and then Right
+	 */
 	public void inOrderTraverseTree(Node focusNode) {
 		if(focusNode!=null) {
 			inOrderTraverseTree(focusNode.leftChild);
 			System.out.println(focusNode);
 			inOrderTraverseTree(focusNode.rightChild);
+			
+		}
+	}
+	/*
+	 * PostOrder Traversal first goto Root , then left and then right
+	 */
+	public void postOrderTraverseTree(Node focusNode) {
+		if(focusNode!=null) {
+			System.out.println(focusNode);
+			postOrderTraverseTree(focusNode.leftChild);
+			postOrderTraverseTree(focusNode.rightChild);
 			
 		}
 	}
@@ -62,7 +76,11 @@ public class BinaryTree {
 		tree.insert(30, "Sectray");
 		tree.insert(85, "Sales Manager");
 		tree.insert(26, "Sales");
+		/*
+		 * tree.node means that root Node is passed which contains all the values
+		 */
 		tree.inOrderTraverseTree(tree.root);
+		tree.postOrderTraverseTree(tree.root);
 		
 
 	}
