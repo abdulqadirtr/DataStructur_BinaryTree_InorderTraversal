@@ -66,7 +66,29 @@ public class BinaryTree {
 			
 		}
 	}
+	
+	/*
+	 * PostOrder Traversal first goto Root , then left and then right
+	 */
+	public Node findTree(int key) {
+		Node focusNode=root;
+	while(focusNode.key!=key) {
+		if(key<focusNode.key) {
+			focusNode=focusNode.leftChild;
+		}
+		else
+		{
+			focusNode=focusNode.leftChild;
+		}
+		if(focusNode==null) {
+			return null;
+		}
+	}
+	return focusNode;
+	}
 
+
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		BinaryTree tree=new BinaryTree();
@@ -81,6 +103,7 @@ public class BinaryTree {
 		 */
 		tree.inOrderTraverseTree(tree.root);
 		tree.postOrderTraverseTree(tree.root);
+		System.out.println(tree.findTree(25));
 		
 
 	}
