@@ -1,5 +1,8 @@
 package tree;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class BinaryTree {
 	
 	Node root;
@@ -66,7 +69,51 @@ public class BinaryTree {
 			
 		}
 	}
+	
+	public void levelOrderTraversal(Node root) {
+		 if(root==null)
+	         return;
+	     Queue<Node> q=new LinkedList<Node>();
+	     q.add(root);
+	     while(!q.isEmpty()) {
+	    	 //retrieve and remove the head of the tree
+	    	 root=q.poll();
+	    	 System.out.print(root+" ");
+	    	 if(root.leftChild!=null) {
+	    		 q.add(root.leftChild);
+	    	 }
+	    	 if(root.rightChild!=null) {
+	    		 q.add(root.rightChild);
+	    	 }
+	     }
+		
+	}
+	
+	
+	
+	
+	/*
+	 * Search for the desired Node
+	 */
+	public Node findTree(int key) {
+		Node focusNode=root;
+	while(focusNode.key!=key) {
+		if(key<focusNode.key) {
+			focusNode=focusNode.leftChild;
+		}
+		else
+		{
+			focusNode=focusNode.leftChild;
+		}
+		if(focusNode==null) {
+			return null;
+		}
+	}
+	return focusNode;
+	}
 
+
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		BinaryTree tree=new BinaryTree();
@@ -79,8 +126,11 @@ public class BinaryTree {
 		/*
 		 * tree.node means that root Node is passed which contains all the values
 		 */
-		tree.inOrderTraverseTree(tree.root);
-		tree.postOrderTraverseTree(tree.root);
+	//	tree.inOrderTraverseTree(tree.root);
+		//tree.postOrderTraverseTree(tree.root);
+	//	System.out.println(tree.findTree(25));
+		
+		tree.levelOrderTraversal(tree.root);
 		
 
 	}
