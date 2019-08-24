@@ -69,6 +69,7 @@ public class BinaryTree {
 			
 		}
 	}
+<<<<<<< HEAD
 /*
  * Level order Tree traverse can not be done with linkedlist,
  * it can be done by Queue the code is given below
@@ -97,6 +98,11 @@ public class BinaryTree {
 	
 	/*
 	 * Search for the desired Node
+=======
+	
+	/*
+	 * PostOrder Traversal first goto Root , then left and then right
+>>>>>>> refs/remotes/origin/master
 	 */
 	public Node findTree(int key) {
 		Node focusNode=root;
@@ -129,11 +135,17 @@ public class BinaryTree {
 		/*
 		 * tree.node means that root Node is passed which contains all the values
 		 */
+<<<<<<< HEAD
 	//	tree.inOrderTraverseTree(tree.root);
 		//tree.postOrderTraverseTree(tree.root);
 	//	System.out.println(tree.findTree(25));
 		
 		tree.levelOrderTraversal(tree.root);
+=======
+		tree.inOrderTraverseTree(tree.root);
+		tree.postOrderTraverseTree(tree.root);
+		System.out.println(tree.findTree(25));
+>>>>>>> refs/remotes/origin/master
 		
 
 	}
