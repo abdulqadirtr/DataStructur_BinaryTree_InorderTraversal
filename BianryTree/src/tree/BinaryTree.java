@@ -69,7 +69,10 @@ public class BinaryTree {
 			
 		}
 	}
-	
+/*
+ * Level order Tree traverse can not be done with linkedlist,
+ * it can be done by Queue the code is given below
+ */
 	public void levelOrderTraversal(Node root) {
 		 if(root==null)
 	         return;
