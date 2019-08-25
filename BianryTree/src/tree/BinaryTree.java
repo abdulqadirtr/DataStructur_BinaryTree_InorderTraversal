@@ -69,7 +69,7 @@ public class BinaryTree {
 			
 		}
 	}
-<<<<<<< HEAD
+
 /*
  * Level order Tree traverse can not be done with linkedlist,
  * it can be done by Queue the code is given below
@@ -135,17 +135,17 @@ public class BinaryTree {
 		/*
 		 * tree.node means that root Node is passed which contains all the values
 		 */
-<<<<<<< HEAD
+
 	//	tree.inOrderTraverseTree(tree.root);
 		//tree.postOrderTraverseTree(tree.root);
 	//	System.out.println(tree.findTree(25));
 		
 		tree.levelOrderTraversal(tree.root);
-=======
+
 		tree.inOrderTraverseTree(tree.root);
 		tree.postOrderTraverseTree(tree.root);
 		System.out.println(tree.findTree(25));
->>>>>>> refs/remotes/origin/master
+
 		
 
 	}
